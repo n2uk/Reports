@@ -29,35 +29,8 @@ namespace WpfApp1
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            var app = new Word.Application();
-            app.Visible = false;
-            app.Documents.Open(Environment.CurrentDirectory + "\\TEMPLATE5.docx");
-
-            object findText = "ПРИЛОЖЕНИЕ";
-            object missing = Type.Missing;
-            Object wrap = Word.WdFindWrap.wdFindContinue;
-            Object replace = Word.WdReplace.wdReplaceAll;
-
-            app.Selection.Find.ClearFormatting();
-
-            Word.Find find = app.Selection.Find;
-            find.Text = "ПРИЛОЖЕНИЕ";
-            find.Replacement.Text = "ХРЕЛОЖЕНИЕ";
-            find.Execute(FindText: Type.Missing,
-                foreach( )
-           MatchCase: false,
-           MatchWholeWord: false,
-           MatchWildcards: false,
-           MatchSoundsLike: missing,
-           MatchAllWordForms: false,
-           Forward: true,
-           Wrap: wrap,
-           Format: false,
-           ReplaceWith: missing, Replace: replace);
-
-            app.Documents.Save();
-            app.Documents.Close();
-            app.Quit();
+Template6 tt = new Template6();
+            tt.Template6Create("1","2","3","4","5","6","7","8");
         }
     }
 }

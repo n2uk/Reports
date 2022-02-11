@@ -215,7 +215,7 @@ namespace Archiving
         private DataParam reciever_init= new DataParam() { Title = "Водитель", Tag = "<RECIEVER_INIT>", TypeOfReports = "6" };
         public DataParam RecieverInit { get { return reciever_init; } }
 
-        //nene 
+        
 
 
     }
